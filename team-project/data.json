@@ -1,0 +1,116 @@
+{
+    "Foods": [
+      {
+        "name": "Pizza",
+        "another_name": "Margherita",
+        "price": "€5.99"
+      },
+      {
+        "name": "Burger",
+        "another_name": "Cheeseburger",
+        "price": "€6.50"
+      },
+      {
+        "name": "Pasta",
+        "another_name": "Carbonara",
+        "price": "€6"
+      },
+      {
+        "name": "Curry",
+        "another_name": "Jalfrezi",
+        "price": "€7.50"
+      },
+      {
+        "name": "Vegetarian",
+        "another_name": "Falafel",
+        "price": "€5.50"
+      }
+    ],
+    "Drinks": [
+      {
+        "name": "Soda",
+        "another_name": "Cola",
+        "price": "€1.99"
+      },
+      {
+        "name": "Juice",
+        "another_name": "Orange Juice",
+        "price": "€1.50"
+      },
+      {
+        "name": "Beer",
+        "another_name": "Carlsberg",
+        "price": "€5.50"
+      },
+      {
+        "name": "Coffee",
+        "another_name": "Americano",
+        "price": "€3.50"
+      },
+      {
+        "name": "Tea",
+        "another_name": "Breakfast",
+        "price": "€3"
+      }
+    ],
+   "Specials": [
+      {
+        "name": "Coffee",
+        "another_name": "Tropical Brew",
+        "price": "€5.99"
+      },
+      {
+        "name": "Fruit Drinks",
+        "another_name": "Pineapple Passion Frost",
+        "price": "€6.50"
+      },
+      {
+        "name": "Fruit Drinks",
+        "another_name": "Watermelon Wave Cooler",
+        "price": "€6.70"
+      },
+      {
+        "name": "Tea",
+        "another_name": "Island Chai Delight",
+        "price": "€5.40"
+      },
+      {
+        "name": "Dessert",
+        "another_name": "Mango Tango Cheesecake",
+        "price": "€6"
+      }
+    ],
+    "Books": [
+      {
+        "name": "Historical",
+        "another_name": "War and Peace",
+        "writer": "Leo Tolstoy",
+        "price": "€24"
+      },
+      {
+        "name": "Romance",
+        "another_name": "Gone with the Wind",
+        "writer": "Margeret Mitchell",
+        "price": "€17.49"
+      },
+      {
+        "name": "Adventure",
+        "another_name": "Moby Dick",
+        "writer": "Herman Melville",
+        "price": "€14.50"
+      },
+      {
+        "name": "Crime",
+        "another_name": "The Big Sleep",
+        "writer": "Raymond Chandler",
+        "price": "€16"
+      },
+      {
+        "name": "Autobiographical",
+        "another_name": "The Diary of a Young Girl",
+        "writer": "Anne Frank",
+        "price": "€12.39"
+      }
+    ]
+  }
+  

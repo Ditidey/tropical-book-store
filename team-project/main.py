@@ -1,38 +1,143 @@
-
 # data for foods, drinks and best selling books - Enna
 data = {
-    "books":{
-        "name": "book1"
-    },
-    "food":{
-        "name": "food"
-    },
-    "drinks":{
-        "name": "drink"
-    }
+       "books": [
+      {
+        "name": "Historical",
+        "another_name": "War and Peace",
+        "writer": "Leo Tolstoy",
+        "price": "€24"
+      },
+      {
+        "name": "Romance",
+        "another_name": "Gone with the Wind",
+        "writer": "Margeret Mitchell",
+        "price": "€17.49"
+      },
+      {
+        "name": "Adventure",
+        "another_name": "Moby Dick",
+        "writer": "Herman Melville",
+        "price": "€14.50"
+      },
+      {
+        "name": "Crime",
+        "another_name": "The Big Sleep",
+        "writer": "Raymond Chandler",
+        "price": "€16"
+      },
+      {
+        "name": "Autobiographical",
+        "another_name": "The Diary of a Young Girl",
+        "writer": "Anne Frank",
+        "price": "€12.39"
+      }
+    ],
+    "foods": [
+      {
+        "name": "Pizza",
+        "another_name": "Margherita",
+        "price": "€5.99"
+      },
+      {
+        "name": "Burger",
+        "another_name": "Cheeseburger",
+        "price": "€6.50"
+      },
+      {
+        "name": "Pasta",
+        "another_name": "Carbonara",
+        "price": "€6"
+      },
+      {
+        "name": "Curry",
+        "another_name": "Jalfrezi",
+        "price": "€7.50"
+      },
+      {
+        "name": "Vegetarian",
+        "another_name": "Falafel",
+        "price": "€5.50"
+      }
+    ],
+    "drinks": [
+      {
+        "name": "Soda",
+        "another_name": "Cola",
+        "price": "€1.99"
+      },
+      {
+        "name": "Juice",
+        "another_name": "Orange Juice",
+        "price": "€1.50"
+      },
+      {
+        "name": "Beer",
+        "another_name": "Carlsberg",
+        "price": "€5.50"
+      },
+      {
+        "name": "Coffee",
+        "another_name": "Americano",
+        "price": "€3.50"
+      },
+      {
+        "name": "Tea",
+        "another_name": "Breakfast",
+        "price": "€3"
+      }
+    ],
+   "specials": [
+      {
+        "name": "Coffee",
+        "another_name": "Tropical Brew",
+        "price": "€5.99"
+      },
+      {
+        "name": "Fruit Drinks",
+        "another_name": "Pineapple Passion Frost",
+        "price": "€6.50"
+      },
+      {
+        "name": "Fruit Drinks",
+        "another_name": "Watermelon Wave Cooler",
+        "price": "€6.70"
+      },
+      {
+        "name": "Tea",
+        "another_name": "Island Chai Delight",
+        "price": "€5.40"
+      },
+      {
+        "name": "Dessert",
+        "another_name": "Mango Tango Cheesecake",
+        "price": "€6"
+      }
+    ]
+  
+  }
+  
 
-}
 # global variable: for using customer information in others functions - Diti
 customerOrderDetails = []
 
 # showing menu and books list - Diti
 def showing_details(details):
-
-    for item, values in details.items():
-        if( item == "books"):
-            print(f"Our best selling {item} here: ")
-            print(f" {item.title()} Name: {values['name']}")
-        elif(item == "drinks"):
-            print(f"Let’s raise a glass to the beginning of Happy Hour and choose your {item}: ")
-            print(f" {item.title()} Name: {values['name']}")
+     for item, values in details.items():       
+        if item == "books":
+            print("Our best-selling books:")
+            for book in values:
+                print(f"  Name: {book['name']}, Writer: {book['writer']}, Price: {book['price']}")
+        elif item == "drinks":
+            print(f"Let’s raise a glass to the beginning of Happy Hour and choose your {item}:")
+            for drink in values:
+                print(f"  Name: {drink['name']}, Price: {drink['price']}")
         else:
-           print(f"Food is the ultimate comfort. All of your favorite {item} here: ")
-           print(f" {item.title()} Name: {values['name']}")
+            print(f"All of your favorite {item} here:")
+            for food in values:
+                print(f"  Name: {food['name']}, Another Name: {food['another_name']}, Price: {food['price']}")
    
-# showing_details(data)
-
-# these are for user 
-           
+ 
+# these are for user           
 # taking order from customer: Ana
 def get_order():
     choices = input("insert item: ")
@@ -48,7 +153,7 @@ def get_customer():
     customerOrderDetails.append(customerDetails)
     return customerDetails
 
-# showing completed order to customer: Ana or Richard
+# showing completed order to customer: Ana  
 def finish_order(items, details="unknown" ):
     print(f"-"*10)
     print(f"{details} Order is completed")
@@ -67,7 +172,6 @@ def add_order():
 def start_order():
     print("Do you want to seat here or take away? ")
     service = input("Type your preferable service: here or home\n")
-
     if(service == 'here'):
         showing_details(data)
         items = get_order()
@@ -81,16 +185,20 @@ def start_order():
 
  
 # these are for owner 
-
-# updating items: owner can update their menu, books
+# authenticating user - Richard
+def isEmp():
+   user_type = input("Are you an employee? (yes/no): ").lower()
+   return user_type == 'yes'
+ 
+# updating items: owner can update their menu, books - Ana  
 def update_items():
      item = input("type the new item: ")
      price = input("type the price: ")
      updatedItems = {item: price}
      print(f"Your updated item is {item} and price is {price}")
      data.update(updatedItems)   
-     
-# showing customer details
+ 
+# showing customer details - Diti 
 def show_customer_details():
     print(customerOrderDetails)
  
